@@ -7,8 +7,8 @@
     path="github.com/Leaflet/Leaflet"
   [[module.imports.mounts]]
     source="leaflet.js"
-    target="static/js/leaflet.js"
-    # target="assets/js/vendor/leaflet/"
+    # target="static/js/leaflet.js"
+    target="assets/js/vendor/leaflet/leaflet.js"
   [[module.imports.mounts]]
     source="leaflet.css"
     target="assets/js/vendor/leaflet/"
