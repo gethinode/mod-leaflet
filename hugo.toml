@@ -3,17 +3,17 @@
     extended = true
     min = "0.110.0"
     max = ""
-  # [[module.imports]]
-  #   path="../node_modules/leaflet/dist"
-  # [[module.imports.mounts]]
-  #   source="leaflet.js"
-  #   target="assets/js/vendor/leaflet/"
-  # [[module.imports.mounts]]
-  #   source="leaflet.css"
-  #   target="assets/js/vendor/leaflet/"
-  # [[module.imports.mounts]]
-  #   source="images"
-  #   target="static/css/images"
+  [[module.imports]]
+    path="github.com/Leaflet/Leaflet"
+  [[module.imports.mounts]]
+    source="leaflet.js"
+    target="assets/js/vendor/leaflet/"
+  [[module.imports.mounts]]
+    source="leaflet.css"
+    target="assets/js/vendor/leaflet/"
+  [[module.imports.mounts]]
+    source="images"
+    target="static/css/images"
 
   # [[module.mounts]]
   #   source = "node_modules/leaflet/dist"
@@ -49,15 +49,15 @@
   # [[module.mounts]]
   #   source = 'archetypes'
   #   target = 'archetypes'
-  [[module.mounts]]
-    source = "node_modules/leaflet/dist"
-    target = "assets/js/vendor/leaflet"
-    includeFiles = "leaflet.js"
-  [[module.mounts]]
-    source = "node_modules/leaflet/dist"
-    target = "assets/scss/vendor/leaflet"
-    includeFiles = "leaflet.css"
-  [[module.mounts]]
-    source = "node_modules/leaflet/dist/images"
-    target = "static/css/images"
-    includeFiles = "*.png"
+  # [[module.mounts]]
+  #   source = "node_modules/leaflet/dist"
+  #   target = "assets/js/vendor/leaflet"
+  #   includeFiles = "leaflet.js"
+  # [[module.mounts]]
+  #   source = "node_modules/leaflet/dist"
+  #   target = "assets/scss/vendor/leaflet"
+  #   includeFiles = "leaflet.css"
+  # [[module.mounts]]
+  #   source = "node_modules/leaflet/dist/images"
+  #   target = "static/css/images"
+  #   includeFiles = "*.png"
