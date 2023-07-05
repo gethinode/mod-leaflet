@@ -52,7 +52,7 @@
   [[module.imports]]
     path="github.com/Leaflet/Leaflet"
   [[module.imports.mounts]]
-    source="leaflet.js"
+    source="leaflet-test.js"
     target="assets/js/vendor/leaflet/leaflet-xyz.js"
     # target="static/js/leaflet.js"
   [[module.imports.mounts]]
