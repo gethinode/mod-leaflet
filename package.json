@@ -1,15 +1,10 @@
 {
   "name": "@gethinode/mod-leaflet",
-  "version": "0.1.0",
-  "description": "Add Leaflet as Hugo module to your Hinode site (work in progress)",
+  "version": "0.1.2",
+  "description": "Adds Leaflet as Hugo module to your Hinode site (work in progress)",
   "keywords": [
     "hugo",
-    "theme",
-    "bootstrap",
-    "responsive",
-    "front-end",
-    "blog",
-    "documentation"
+    "module"
   ],
   "main": "index.js",
   "publishConfig": {
@@ -17,16 +12,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
-    "lint:scripts": "eslint assets/js",
-    "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
-    "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
-    "lint:markdown-fix": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
-    "test": "npm run -s lint",
-    "env": "hugo env",
-    "precheck": "npm version",
-    "check": "hugo version",
-    "upgrade": "npx npm-check-updates -u"
+    "postinstall": "cpy node_modules/leaflet/dist/leaflet.css dist --rename=leaflet.scss --flat && cpy node_modules/leaflet/dist/leaflet.js dist --flat && cpy node_modules/leaflet/dist/images/** dist/images --flat"
   },
   "repository": {
     "type": "git",
@@ -39,17 +25,7 @@
   },
   "homepage": "https://gethinode.com",
   "devDependencies": {
-    "eslint": "^8.39.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^16.0.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "leaflet": "^1.9.4",
-    "markdownlint-cli2": "^0.8.1",
-    "stylelint": "^15.6.0",
-    "stylelint-config-standard-scss": "^10.0.0"
-  },
-  "hugo-bin": {
-    "buildTags": "extended"
+    "cpy-cli": "^5.0.0",
+    "leaflet": "^1.9.4"
   }
 }
