@@ -5,7 +5,11 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: daily
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
