@@ -34,7 +34,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^5.0.0",
-    "hugo-bin": "^0.111.0",
+    "hugo-bin": "^0.111.2",
     "leaflet": "^1.9.4",
     "rimraf": "^5.0.0",
     "semantic-release": "^21.0.7"
@@ -47,7 +47,6 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
       "@semantic-release/github",
       ["@semantic-release/exec", {
         "prepare": "npm install"
