@@ -1,0 +1,9 @@
+body {
+    height: 100vh;
+}
+
+.leaflet-custom {
+    height: 80%;
+    width: 100%;
+    border: solid;
+}

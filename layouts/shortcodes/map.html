@@ -1,0 +1,55 @@
+{{- $id := printf "leaflet-map-%d" .Ordinal -}}
+{{ with .Get "id" }}
+    {{ $id = . }}
+{{ end }}
+
+{{ $class := .Get "class" | default "ratio ratio-16x9 w-100 mx-auto" }}
+
+{{ $error := false }}
+{{ $viewLat := 52.377 }}
+{{ $viewLong := 4.90 }}
+{{ $zoom := 13 }}
+{{ $popup := "" }}
+{{ $popupLat := ""  }}
+{{ $popupLong := "" }}
+
+{{- with .Get "lat" }}{{ $viewLat = . }}{{ end -}}
+{{- with .Get "long" }}{{ $viewLong = . }}{{ end -}}
+{{- with .Get "zoom" }}{{ $zoom = . }}{{ end -}}
+{{- with .Get "popup" }}{{ $popup = . }}{{ end -}}
+{{- with .Get "popup-lat" }}{{ $popupLat = . }}{{ end -}}
+{{- with .Get "popup-long" }}{{ $popupLong = . }}{{ end -}}
+
+{{- if ne (printf "%T" $viewLat) "float64" -}}
+    {{- errorf "Invalid value for param 'lat': %s" .Position -}}
+    {{- $error = true -}}
+{{- end -}}
+
+{{- if ne (printf "%T" $viewLong) "float64" -}}
+    {{- errorf "Invalid value for param 'long': %s" .Position -}}
+    {{- $error = true -}}
+{{- end -}}
+
+{{- if ne (printf "%T" $zoom) "int" -}}
+    {{- errorf "Invalid value for param 'zoom': %s" .Position -}}
+    {{- $error = true -}}
+{{- end -}}
+
+{{ if and $popup (ne (printf "%T" $popupLat) "float64") }}
+    {{- errorf "Invalid or missing value for param 'popup-lat': %s" .Position -}}
+    {{- $error = true -}}
+{{ end }}
+
+{{ if and $popup (ne (printf "%T" $popupLong) "float64") }}
+    {{- errorf "Invalid or missing value for param 'popup-long': %s" .Position -}}
+    {{- $error = true -}}
+{{ end }}
+
+<div id="{{ $id }}" class="leaflet-map {{ $class }}"
+    {{ with $viewLat }}data-leaflet-view-lat="{{ . }}"{{ end }}
+    {{ with $viewLong }}data-leaflet-view-long="{{ . }}"{{ end }}
+    {{ with $zoom }}data-leaflet-view-zoom="{{ . }}"{{ end }}
+    {{ with $popup }}data-leaflet-popup-caption="{{ . }}"{{ end }}
+    {{ with $popupLat }}data-leaflet-popup-lat="{{ . }}"{{ end }}
+    {{ with $popupLong }}data-leaflet-popup-long="{{ . }}"{{ end }}>
+</div>
