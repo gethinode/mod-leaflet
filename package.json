@@ -31,12 +31,38 @@
   },
   "homepage": "https://gethinode.com",
   "devDependencies": {
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^5.0.0",
     "hugo-bin": "^0.111.0",
     "leaflet": "^1.9.4",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.0",
+    "semantic-release": "^21.0.7"
   },
   "hugo-bin": {
     "buildTags": "extended"
+  },
+  "release": {
+    "branches": "main",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      ["@semantic-release/exec", {
+        "prepare": "npm install"
+      }],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
   }
 }
