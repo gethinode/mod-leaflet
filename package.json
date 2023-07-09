@@ -1,6 +1,6 @@
 {
   "name": "@gethinode/mod-leaflet",
-  "version": "0.5.0",
+  "version": "0.2.0",
   "description": "Adds Leaflet as Hugo module to your Hinode site (work in progress)",
   "keywords": [
     "hugo",
@@ -17,7 +17,7 @@
     "clean": "rimraf exampleSite/public exampleSite/resources",
     "mod:tidy": "hugo mod tidy -s exampleSite",
     "mod:update": "npm run -s mod:tidy && hugo mod get -u -s exampleSite",
-    "postinstall": "cpy node_modules/leaflet/dist/leaflet.css dist --rename=leaflet.scss --flat && cpy node_modules/leaflet/dist/leaflet.js dist --flat && cpy node_modules/leaflet/dist/images/** dist/images --flat",
+    "postinstall": "cpy node_modules/leaflet/dist/leaflet.css dist --rename=test.tmp --flat && cpy node_modules/leaflet/dist/leaflet.css dist --rename=leaflet.scss --flat && cpy node_modules/leaflet/dist/leaflet.js dist --flat && cpy node_modules/leaflet/dist/images/** dist/images --flat",
     "test": "npm run -s build"
   },
   "repository": {
@@ -51,9 +51,7 @@
       ["@semantic-release/exec", {
         "prepare": "npm install"
       }],
-      [
-        "@semantic-release/git",
-        {
+      ["@semantic-release/git", {
           "assets": [
             "dist",
             "package.json",
