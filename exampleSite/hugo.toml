@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Test Site for mod-leaflet'
+title = 'Test site for mod-leaflet'
 
 [module]
   replacements = 'github.com/gethinode/mod-leaflet -> ../..'
