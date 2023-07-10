@@ -1,6 +1,6 @@
 {
   "name": "@gethinode/mod-leaflet",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Adds Leaflet as Hugo module to your Hinode site (work in progress)",
   "keywords": [
     "hugo",
@@ -49,10 +49,15 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
       "@semantic-release/npm",
-      ["@semantic-release/exec", {
-        "prepare": "npm install"
-      }],
-      ["@semantic-release/git", {
+      [
+        "@semantic-release/exec",
+        {
+          "prepare": "npm install"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
           "assets": [
             "dist",
             "package.json",
