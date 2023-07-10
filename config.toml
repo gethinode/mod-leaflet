@@ -5,11 +5,11 @@
     max = ""
   [[module.mounts]]
     source = "dist"
-    target = "assets/js/vendor/leaflet"
+    target = "assets/js/modules/leaflet"
     includeFiles = "leaflet.js"
   [[module.mounts]]
     source = "dist"
-    target = "assets/scss/vendor/leaflet"
+    target = "assets/scss/modules/leaflet"
     includeFiles = "leaflet.scss"
   [[module.mounts]]
     source = "dist/images"
