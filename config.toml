@@ -9,7 +9,7 @@
     includeFiles = "leaflet.js"
   [[module.mounts]]
     source = "dist"
-    target = "assets/scss/modules/leaflet"
+    target = "assets/scss"
     includeFiles = "leaflet.scss"
   [[module.mounts]]
     source = "dist/images"
