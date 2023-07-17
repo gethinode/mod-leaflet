@@ -16,5 +16,5 @@ title = 'Test site for mod-leaflet'
     source = "layouts"
     target = "layouts"
   [[module.imports.mounts]]
-    source = "assets/js/leaflet-map.js"
+    source = "assets/js/modules/leaflet/leaflet-map.js"
     target = "static/leaflet-map.js"
