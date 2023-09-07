@@ -1,7 +1,7 @@
 {
   "name": "@gethinode/mod-leaflet",
   "version": "0.3.4",
-  "description": "Adds Leaflet as Hugo module to your Hinode site (work in progress)",
+  "description": "Adds Leaflet as Hugo module to your Hinode site",
   "keywords": [
     "hugo",
     "module"
