@@ -40,7 +40,7 @@
     "hugo-bin": "^0.114.2",
     "leaflet": "^1.9.4",
     "rimraf": "^5.0.0",
-    "semantic-release": "^22.0.0"
+    "semantic-release": "^22.0.1"
   },
   "hugo-bin": {
     "buildTags": "extended"
