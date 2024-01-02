@@ -1,0 +1,55 @@
+comment: >-
+  Use the map shortcode to show an interactive map, powered by Leaflet. The
+  shortcode is a wrapper of the Leaflet library that provides basic
+  functionality.
+arguments:
+  id:
+    type: string
+    optional: true
+    comment: >-
+      Unique identifier of the map element, defaults to `leaflet-map-n` with a
+      sequential number `n`.
+  class:
+    type: string
+    optional: true
+    default: ratio ratio-16x9 w-100 mx-auto
+    comment: Class attribute of the inner panel element.
+  lat:
+    type:
+      - float
+      - float64
+    optional: true
+    default: 52.377
+    comment: Latitude of the map center.
+  long:
+    type:
+      - float
+      - float64
+    optional: true
+    default: 4.90
+    comment: Longitude of the map center.
+  zoom:
+    type: int
+    optional: true
+    default: 13
+    comment: >-
+      Initial map zoom level between 1 (minimum zoom) - 18 (maximum zoom).
+    options:
+      min: 1
+      max: 18
+  popup:	
+    type: string
+    optional: true
+    comment: Optional text of a popup marker.
+  popup-lat:
+    type:
+      - float
+      - float64
+    optional: true
+    comment: Latitude of the popup marker.
+  popup-long:
+    type:
+      - float
+      - float64
+    optional: true
+    comment: Longitude of the popup marker.
