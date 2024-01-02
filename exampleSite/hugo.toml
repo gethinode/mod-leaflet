@@ -10,6 +10,9 @@ title = 'Test site for mod-leaflet'
     source = "dist"
     target = "static"
   [[module.imports.mounts]]
+    source = "static"
+    target = "static"
+  [[module.imports.mounts]]
     source = "dist/leaflet.scss"
     target = "static/leaflet.css"
   [[module.imports.mounts]]
