@@ -1,3 +1,19 @@
+<!-- 
+    Copyright © 2024 The Hinode Team / Mark Dumay. All rights reserved.
+    Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
+    Visit gethinode.com/license for more details.
+-->
+
+{{ $error := false }}
+
+<!-- Validate arguments -->
+{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "map" "args" .Params) }}
+    {{ errorf "Invalid arguments: %s" .Position -}}
+    {{ $error = true }}
+{{ end }}
+
+<!-- Initialize arguments -->
+
 {{- $id := printf "leaflet-map-%d" .Ordinal -}}
 {{ with .Get "id" }}
     {{ $id = . }}
@@ -20,36 +36,14 @@
 {{- with .Get "popup-lat" }}{{ $popupLat = . }}{{ end -}}
 {{- with .Get "popup-long" }}{{ $popupLong = . }}{{ end -}}
 
-{{- if ne (printf "%T" $viewLat) "float64" -}}
-    {{- errorf "Invalid value for param 'lat': %s" .Position -}}
-    {{- $error = true -}}
+<!-- Main code -->
+{{- if not $error -}}
+    <div id="{{ $id }}" class="leaflet-map {{ $class }}"
+        {{ with $viewLat }}data-leaflet-view-lat="{{ . }}"{{ end }}
+        {{ with $viewLong }}data-leaflet-view-long="{{ . }}"{{ end }}
+        {{ with $zoom }}data-leaflet-view-zoom="{{ . }}"{{ end }}
+        {{ with $popup }}data-leaflet-popup-caption="{{ . }}"{{ end }}
+        {{ with $popupLat }}data-leaflet-popup-lat="{{ . }}"{{ end }}
+        {{ with $popupLong }}data-leaflet-popup-long="{{ . }}"{{ end }}>
+    </div>
 {{- end -}}
-
-{{- if ne (printf "%T" $viewLong) "float64" -}}
-    {{- errorf "Invalid value for param 'long': %s" .Position -}}
-    {{- $error = true -}}
-{{- end -}}
-
-{{- if ne (printf "%T" $zoom) "int" -}}
-    {{- errorf "Invalid value for param 'zoom': %s" .Position -}}
-    {{- $error = true -}}
-{{- end -}}
-
-{{ if and $popup (ne (printf "%T" $popupLat) "float64") }}
-    {{- errorf "Invalid or missing value for param 'popup-lat': %s" .Position -}}
-    {{- $error = true -}}
-{{ end }}
-
-{{ if and $popup (ne (printf "%T" $popupLong) "float64") }}
-    {{- errorf "Invalid or missing value for param 'popup-long': %s" .Position -}}
-    {{- $error = true -}}
-{{ end }}
-
-<div id="{{ $id }}" class="leaflet-map {{ $class }}"
-    {{ with $viewLat }}data-leaflet-view-lat="{{ . }}"{{ end }}
-    {{ with $viewLong }}data-leaflet-view-long="{{ . }}"{{ end }}
-    {{ with $zoom }}data-leaflet-view-zoom="{{ . }}"{{ end }}
-    {{ with $popup }}data-leaflet-popup-caption="{{ . }}"{{ end }}
-    {{ with $popupLat }}data-leaflet-popup-lat="{{ . }}"{{ end }}
-    {{ with $popupLong }}data-leaflet-popup-long="{{ . }}"{{ end }}>
-</div>
