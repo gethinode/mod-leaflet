@@ -1,2 +1,4 @@
 github.com/gethinode/mod-utils v1.0.0 h1:cqHm2xS5uDiJzRm1KfHaNbq6uMVDKLhQa8/BuTZ1nhY=
 github.com/gethinode/mod-utils v1.0.0/go.mod h1:ONJm3pHCq7nvaPNjusLZNCeCbhOhSBH4HVKHwK1FdYE=
+github.com/gethinode/mod-utils/v2 v2.0.3 h1:4BsRNGi+0a3Mq021Gq/TwDNiyuIfZ8xnpYU0DkNbUYI=
+github.com/gethinode/mod-utils/v2 v2.0.3/go.mod h1:GTYeknoLujNjfDxI+V9Dcug26CYJSTJ0B/U2dagw9oY=
