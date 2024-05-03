@@ -1,6 +1,6 @@
 {
   "name": "@gethinode/mod-leaflet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds Leaflet as Hugo module to your Hinode site",
   "keywords": [
     "hugo",
@@ -37,7 +37,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^5.0.0",
-    "hugo-bin": "^0.122.3",
+    "hugo-bin": "^0.122.5",
     "leaflet": "^1.9.4",
     "rimraf": "^5.0.5",
     "semantic-release": "^23.0.8"
