@@ -29,3 +29,6 @@
     target = 'static'
   [[module.imports]]
     path = "github.com/gethinode/mod-utils/v2"
+
+[params.modules.leaflet]
+  integration = "optional"
