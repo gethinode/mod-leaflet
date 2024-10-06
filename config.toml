@@ -32,3 +32,6 @@
 
 [params.modules.leaflet]
   integration = "optional"
+
+[params.modules.leaflet.csp]
+  img-src = ["tile.openstreetmap.org"]
