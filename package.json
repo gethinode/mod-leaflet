@@ -37,7 +37,7 @@
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "cpy-cli": "^6.0.0",
-    "hugo-bin": "^0.145.2",
+    "hugo-bin": "^0.146.0",
     "leaflet": "^1.9.4",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.7"
