@@ -21,7 +21,9 @@
     "mod:update": "hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
     "postinstall": "cpy node_modules/leaflet/dist/leaflet.css dist --rename=leaflet.scss --flat && cpy node_modules/leaflet/dist/leaflet.js dist --flat && cpy node_modules/leaflet/dist/images/** dist/images --flat",
-    "test": "npm run -s build"
+    "test": "npm run -s build",
+    "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
+    "prepare": "node .husky/install.mjs"
   },
   "repository": {
     "type": "git",
@@ -34,10 +36,15 @@
   },
   "homepage": "https://gethinode.com",
   "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.3.1",
     "cpy-cli": "^6.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "hugo-bin": "^0.149.2",
+    "husky": "^9.1.7",
     "leaflet": "^1.9.4",
     "rimraf": "^6.1.2",
     "semantic-release": "^25.0.2"
@@ -69,5 +76,10 @@
         }
       ]
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

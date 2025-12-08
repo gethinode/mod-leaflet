@@ -3,9 +3,9 @@ languageCode = 'en-us'
 title = 'Test site for mod-leaflet'
 
 [module]
-  replacements = 'github.com/gethinode/mod-leaflet -> ../..'
+  workspace = "mod-leaflet.work"
   [[module.imports]]
-    path = "github.com/gethinode/mod-leaflet"
+    path = "github.com/gethinode/mod-leaflet/v2"
   [[module.imports.mounts]]
     source = "data"
     target = "data"
