@@ -1,3 +1,6 @@
+icon: map
+example: |
+  {{< map lat="52.377" long="4.90" zoom="13" popup="Amsterdam" >}}
 comment: >-
   Use the map shortcode to show an interactive map, powered by Leaflet. The
   shortcode is a wrapper of the Leaflet library that provides basic
