@@ -9,25 +9,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
-        node-version: [22.x, 24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-    - uses: actions/checkout@v7
-    - name: Install Go
-      uses: actions/setup-go@v6
-      with:
-        go-version: ">1.0.0"
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run test
+  test:
+    uses: gethinode/.github/.github/workflows/test.yml@v1
+    with:
+      package-manager: pnpm
+    secrets: inherit

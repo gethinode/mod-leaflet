@@ -7,23 +7,7 @@ on:
 
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-          # Make sure the release step uses its own credentials
-          persist-credentials: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: "lts/*"
-      - name: Install dependencies
-        run: npm clean-install
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GIT }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+    uses: gethinode/.github/.github/workflows/release.yml@v1
+    with:
+      package-manager: pnpm
+    secrets: inherit
