@@ -7,17 +7,18 @@
 {{ $error := false }}
 
 {{/* Validate and initialize arguments */}}
-{{ $args := partial "utilities/InitArgs.html" (dict "structure" "map" "args" .Params "named" .IsNamedParams "group" "shortcode") }}
-{{ if or $args.err $args.warnmsg }}
-    {{ partial (cond $args.err "utilities/LogErr.html" "utilities/LogWarn.html") (dict 
-        "partial"  "shortcodes/map.html" 
+{{ $result := partial "utilities/Args.html" (dict "structure" "map" "args" .Params "named" .IsNamedParams "group" "shortcode" "strict" false) }}
+{{ $args := $result.args }}
+{{ if or $result.err $result.warnmsg }}
+    {{ partial (cond $result.err "utilities/LogErr.html" "utilities/LogWarn.html") (dict
+        "partial"  "shortcodes/map.html"
         "warnid"   "warn-invalid-arguments"
         "msg"      "Invalid arguments"
-        "details"  ($args.errmsg | append $args.warnmsg)
+        "details"  ($result.errmsg | append $result.warnmsg)
         "file"     page.File
         "position" .Position
     )}}
-    {{ $error = $args.err }}
+    {{ $error = $result.err }}
 {{ end }}
 
 {{/* Initialize local arguments */}}
