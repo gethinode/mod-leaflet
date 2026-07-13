@@ -26,7 +26,11 @@
 
 {{/* Main code */}}
 {{- if not $error -}}
+    {{/* The gesture hints are rendered here so they stay translatable. The modifier is left as
+         a placeholder for the script, which resolves it to the visitor's platform. */}}
     <div id="{{ $id }}" class="leaflet-map {{ $args.class }}"
+        data-leaflet-hint-zoom="{{ T "mapZoomHint" "{modifier}" }}"
+        data-leaflet-hint-drag="{{ T "mapDragHint" }}"
         {{ with $args.lat }}data-leaflet-view-lat="{{ . }}"{{ end }}
         {{ with $args.long }}data-leaflet-view-long="{{ . }}"{{ end }}
         {{ with $args.zoom }}data-leaflet-view-zoom="{{ . }}"{{ end }}

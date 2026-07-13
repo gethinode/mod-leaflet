@@ -1,0 +1,41 @@
+// Leaflet's own stylesheet, vendored by the postinstall script and mounted alongside this
+// file. Importing it here keeps a single "leaflet" stylesheet for the module while leaving
+// the vendored file untouched.
+@import "leaflet-vendor";
+
+// Overlay shown when a gesture was meant for the page rather than the map: a plain wheel,
+// or a single finger. It explains how to address the map instead, so an ignored gesture
+// does not read as a broken map.
+.leaflet-gesture-hint {
+    position: absolute;
+    inset: 0;
+    z-index: 999; // above the tile and marker panes, below the Leaflet controls (1000+)
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    color: #fff;
+    background-color: rgb(0 0 0 / 60%);
+    text-align: center;
+    font-size: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    // The overlay is advisory. Never let it swallow the gesture it is explaining.
+    pointer-events: none;
+}
+
+.leaflet-gesture-hint-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .leaflet-gesture-hint {
+        transition: none;
+    }
+}

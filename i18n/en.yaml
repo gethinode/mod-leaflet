@@ -1,0 +1,4 @@
+- id: mapZoomHint
+  translation: "Use {{ . }} + scroll to zoom the map"
+- id: mapDragHint
+  translation: "Use two fingers to move the map"

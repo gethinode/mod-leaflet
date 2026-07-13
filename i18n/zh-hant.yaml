@@ -1,0 +1,4 @@
+- id: mapZoomHint
+  translation: "按住 {{ . }} 並捲動以縮放地圖"
+- id: mapDragHint
+  translation: "使用雙指移動地圖"

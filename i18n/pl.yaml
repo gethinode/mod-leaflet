@@ -1,0 +1,4 @@
+- id: mapZoomHint
+  translation: "Użyj {{ . }} + przewijanie, aby przybliżyć mapę"
+- id: mapDragHint
+  translation: "Użyj dwóch palców, aby przesunąć mapę"

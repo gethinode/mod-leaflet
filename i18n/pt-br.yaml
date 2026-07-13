@@ -1,0 +1,4 @@
+- id: mapZoomHint
+  translation: "Use {{ . }} + rolagem para ampliar o mapa"
+- id: mapDragHint
+  translation: "Use dois dedos para mover o mapa"
