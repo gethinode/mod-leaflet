@@ -7,10 +7,11 @@
     source = "dist"
     target = "assets/js/modules/leaflet"
     includeFiles = "leaflet.js"
+  # Leaflet's own stylesheet, vendored by the postinstall script. It is mounted beside
+  # assets/scss/leaflet.scss, which imports it and adds the module's own styles.
   [[module.mounts]]
-    source = "dist"
-    target = "assets/scss"
-    includeFiles = "leaflet.scss"
+    source = "dist/leaflet.scss"
+    target = "assets/scss/leaflet-vendor.scss"
   [[module.mounts]]
     source = "dist/images"
     target = "static/css/images"
@@ -24,6 +25,9 @@
   [[module.mounts]]
     source = 'data'
     target = 'data'
+  [[module.mounts]]
+    source = 'i18n'
+    target = 'i18n'
   [[module.mounts]]
     source = 'static'
     target = 'static'

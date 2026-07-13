@@ -1,0 +1,4 @@
+- id: mapZoomHint
+  translation: "Gebruik {{ . }} + scrollen om in te zoomen op de kaart"
+- id: mapDragHint
+  translation: "Gebruik twee vingers om de kaart te verplaatsen"

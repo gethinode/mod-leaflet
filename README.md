@@ -34,6 +34,20 @@
 
 Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. This repository maintains a Hugo module to add [Leaflet][leaflet] to a Hinode site. Visit the Hinode documentation site for [installation instructions][hinode_docs].
 
+## Gestures
+
+The map uses **cooperative gestures**, so scrolling the page never gets trapped by a map in its path. It only claims a gesture that is unambiguously meant for it:
+
+| Gesture | Result |
+| --- | --- |
+| Wheel | Scrolls the page |
+| `Ctrl`/`⌘` + wheel | Zooms the map |
+| Mouse drag | Pans the map |
+| One finger | Scrolls the page |
+| Two fingers | Pans and pinch-zooms the map |
+
+A gesture the map ignores briefly shows an overlay explaining how to address the map instead. Its wording comes from the `mapZoomHint` and `mapDragHint` translations, which a site can override.
+
 ## Contributing
 
 This module uses [semantic-release][semantic-release] to automate the release of new versions. The package uses `husky` and `commitlint` to ensure commit messages adhere to the [Conventional Commits][conventionalcommits] specification. You can run `npx git-cz` from the terminal to help prepare the commit message.
