@@ -22,7 +22,7 @@
 {{ end }}
 
 {{/* Initialize local arguments */}}
-{{- $id := $args.id | default (printf "leaflet-map-%d" .Ordinal) -}}
+{{- $id := $args.id | default (partial "utilities/UniqueID.html" (dict "prefix" "leaflet-map")) -}}
 
 {{/* Main code */}}
 {{- if not $error -}}
