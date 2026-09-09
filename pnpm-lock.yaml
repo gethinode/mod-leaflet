@@ -24,8 +24,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       hugo-extended:
-        specifier: ^0.164.0
-        version: 0.164.0
+        specifier: ^0.165.0
+        version: 0.165.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -362,8 +362,8 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
-  argue-cli@3.1.0:
-    resolution: {integrity: sha512-DhBpBfXL4SS2uC0N922MMajKR3CdrTG0u2or1PNYgXMsrSzViJrbtvT0nCLlLGUI0plam/ZZCs7aAauHtW9thw==}
+  argue-cli@3.2.0:
+    resolution: {integrity: sha512-VipTB0gXgGIFO2Rg9yEVN5wLt2AurJcZqDbgmYSwPwsykhLrQhs240/bfceev4w68lI8JshoOJIk9uW7tFzROw==}
     engines: {node: '>=22'}
 
   argv-formatter@1.0.0:
@@ -756,8 +756,8 @@ packages:
     resolution: {integrity: sha512-ag87y7cJJ9/3+GxFr8Oy4O5faDsGRGnBGsJj/YjOSsSx/5eadKLYTMPlzuR6obgoCDDm0abAAZitXXQkMOPSpA==}
     engines: {node: '>= 20'}
 
-  hugo-extended@0.164.0:
-    resolution: {integrity: sha512-XhUZ9cI5XkC+Jtg6GMS679dVSAY7j/Fyo2BYDzsuqTKiMzDwr+Ylqd9Ndgvm2sUW+6BKzJCGQWdPI8QnKhVMSQ==}
+  hugo-extended@0.165.0:
+    resolution: {integrity: sha512-+5NMCukM+/ITfWWGBtycRrR5L3MRmAaxl1O2StS+jPapoqJJu1L3ux0LidcxfN7Rp2DAKTX+EZaUhw+paj/uiw==}
     engines: {node: '>=18.17'}
     hasBin: true
 
@@ -1423,8 +1423,8 @@ packages:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
 
-  tar@7.5.19:
-    resolution: {integrity: sha512-4LeEWl96twnS2Q7Bz4MGqgazLqO+hJN63GZxXoIqh1T3VweYD997gbU1ItNsQafqqXTXd5WFyFdReLtwvRBNiw==}
+  tar@7.5.22:
+    resolution: {integrity: sha512-MFO/QzvtAOmJbkhOaCTvbGcFN9L9b+JunIsDwaKljSOdcLMea3NJ1k9Usz/rjdfSXTq4dfzfeS7W4p4YOAAHeA==}
     engines: {node: '>=18'}
 
   temp-dir@3.0.0:
@@ -2021,7 +2021,7 @@ snapshots:
 
   argparse@2.0.1: {}
 
-  argue-cli@3.1.0: {}
+  argue-cli@3.2.0: {}
 
   argv-formatter@1.0.0: {}
 
@@ -2152,7 +2152,7 @@ snapshots:
   conventional-commits-parser@7.1.2:
     dependencies:
       '@simple-libs/stream-utils': 2.0.0
-      argue-cli: 3.1.0
+      argue-cli: 3.2.0
 
   convert-hrtime@5.0.0: {}
 
@@ -2450,10 +2450,10 @@ snapshots:
       - kerberos
       - supports-color
 
-  hugo-extended@0.164.0:
+  hugo-extended@0.165.0:
     dependencies:
       adm-zip: 0.5.18
-      tar: 7.5.19
+      tar: 7.5.22
 
   human-signals@5.0.0: {}
 
@@ -2997,7 +2997,7 @@ snapshots:
 
   tagged-tag@1.0.0: {}
 
-  tar@7.5.19:
+  tar@7.5.22:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
