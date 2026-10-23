@@ -5,3 +5,12 @@ allowBuilds:
   # add more only when a postinstall failure is investigated and trusted
 minimumReleaseAgeExclude:
   - "@gethinode/*"
+
+# Force-patch transitive dependencies flagged by `pnpm audit`.
+# adm-zip: hugo-extended pins ^0.5.17; force >=0.6.1 to cover the
+#   crafted-ZIP allocation DoS (GHSA-xcpc-8h2w-3j85) and destination-symlink
+#   overwrite (GHSA-vwc7-r8mq-g2x9).
+# Drop each override once the upstream dependency ranges resolve patched
+# versions without assistance.
+overrides:
+  adm-zip: ">=0.6.1"
