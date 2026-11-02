@@ -27,8 +27,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       hugo-extended:
-        specifier: ^0.168.0
-        version: 0.168.0
+        specifier: ^0.169.0
+        version: 0.169.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -743,8 +743,8 @@ packages:
     resolution: {integrity: sha512-ag87y7cJJ9/3+GxFr8Oy4O5faDsGRGnBGsJj/YjOSsSx/5eadKLYTMPlzuR6obgoCDDm0abAAZitXXQkMOPSpA==}
     engines: {node: '>= 20'}
 
-  hugo-extended@0.168.0:
-    resolution: {integrity: sha512-KhWR1CWYrpIcM3aL+s0ii/rVKQDpTDVqWXKH4o2iRbcbj1O/0dHyKmk29zIcsHsjLHpfS+7Z228fBycDgv9gkw==}
+  hugo-extended@0.169.0:
+    resolution: {integrity: sha512-TPBaU2eIhNZd9iY+0ejVJeGkZ6DieRpKHCanriritTr/Q89tJE41JQc2Ja4/Z1QzezIIQzhvAp1NlmzZWa7yww==}
     engines: {node: '>=18.17'}
     hasBin: true
 
@@ -2424,7 +2424,7 @@ snapshots:
       - kerberos
       - supports-color
 
-  hugo-extended@0.168.0:
+  hugo-extended@0.169.0:
     dependencies:
       adm-zip: 0.6.1
       tar: 7.5.22
