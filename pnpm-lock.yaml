@@ -7,6 +7,9 @@ settings:
 overrides:
   adm-zip: '>=0.6.1'
 
+patchedDependencies:
+  hugo-extended@0.170.0: 92db866b70b875ea0aa801d7f7c13bb67aea8bd0a3bdab25c71135df07252bed
+
 importers:
 
   .:
@@ -27,8 +30,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       hugo-extended:
-        specifier: ^0.169.0
-        version: 0.169.0
+        specifier: 0.170.0
+        version: 0.170.0(patch_hash=92db866b70b875ea0aa801d7f7c13bb67aea8bd0a3bdab25c71135df07252bed)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -749,8 +752,8 @@ packages:
     resolution: {integrity: sha512-ag87y7cJJ9/3+GxFr8Oy4O5faDsGRGnBGsJj/YjOSsSx/5eadKLYTMPlzuR6obgoCDDm0abAAZitXXQkMOPSpA==}
     engines: {node: '>= 20'}
 
-  hugo-extended@0.169.0:
-    resolution: {integrity: sha512-TPBaU2eIhNZd9iY+0ejVJeGkZ6DieRpKHCanriritTr/Q89tJE41JQc2Ja4/Z1QzezIIQzhvAp1NlmzZWa7yww==}
+  hugo-extended@0.170.0:
+    resolution: {integrity: sha512-Esz+/S6c5nCvP5t6hhm12J7DNvsFzyI4br3LkKaBsW5yki/G4s66wf/b+oe80MwrcvCPf1WafTLFeEE9K0SbmA==}
     engines: {node: '>=18.17'}
     hasBin: true
 
@@ -2450,7 +2453,7 @@ snapshots:
       - kerberos
       - supports-color
 
-  hugo-extended@0.169.0:
+  hugo-extended@0.170.0(patch_hash=92db866b70b875ea0aa801d7f7c13bb67aea8bd0a3bdab25c71135df07252bed):
     dependencies:
       adm-zip: 0.6.1
       tar: 7.5.22
